@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://image.freepik.com/free-vector/seamless-cartoon-landscape-parallax-nature-panorama-ground-with-grass-trees-rocks-background_80590-7658.jpg);
+    background-size: cover;
+    position: absolute;
+  
+}
+.track{
+    height: 20vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    
+    position: absolute;
+    top: 100vh;
+    animation: carmove linear 13s infinite;
+}
+.car{
+    height: 100px;
+    width: 280px;
+    background-image: url(car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100vh;
+    animation: shake linear 3s infinite;
+}
+
+.left img{
+    width: 45px;
+    animation: wheelrotation linear .6s infinite;
+}
+.right img{
+    width: 45px;
+    animation: wheelrotation linear .6s infinite;
+}
+.left{
+    width: 37px;
+    position: relative;
+    top: 44px;
+    left: 43px;
+    height: 10px;
+}
+.right{
+    width: 37px;
+    position: relative;
+    top: 36px;
+    left: 193px;
+}
+@keyframes wheelrotation {
+    100%{
+    transform: rotate(360deg)
+    }
+    
+}
+@keyframes carmove{
+    100%{
+    transform: translateX(-500vw)
+    }
+    
+}
+@keyframes shake{
+    0%{
+    transform: translateY(-5px)
+    }
+    50%{
+        transform: translateY(5px)
+    }
+    100%{
+        transform: translateY(-5px)
+    }
+    
+}
